@@ -1,0 +1,30 @@
+group 'galex.co.il'
+version '1.0.0'
+
+buildscript {
+
+    ext.kotlin_version = '1.2.50'
+
+    repositories {
+        google()
+        jcenter()
+        mavenLocal()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.android.tools.build:gradle:3.2.0-alpha18'
+    }
+
+    
+
+
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenLocal()
+    }
+}

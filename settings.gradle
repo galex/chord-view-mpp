@@ -1,0 +1,5 @@
+rootProject.name = 'chord-view-mpp'
+include ':lib:common'
+include ':lib:js'
+include ':lib:android'
+

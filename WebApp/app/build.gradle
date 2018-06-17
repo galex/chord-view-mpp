@@ -1,0 +1,65 @@
+buildscript {
+
+    ext.kotlin_version = '1.2.50'
+
+    repositories {
+        jcenter()
+        maven {
+            url "https://dl.bintray.com/kotlin/kotlin-eap"
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-frontend-plugin:0.0.31"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'galex.co.il'
+version '1.0.0'
+
+// apply plugin
+apply plugin: 'org.jetbrains.kotlin.frontend'
+apply plugin: 'kotlin2js'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation 'il.co.galex:js:1.0.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
+    testCompile "org.jetbrains.kotlin:kotlin-test-js:$kotlin_version"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+// configure kotlin compiler
+compileKotlin2Js {
+    kotlinOptions.metaInfo = true
+    //kotlinOptions.outputFile = "$project.buildDir.path/js/${project.name}.js"
+    kotlinOptions.sourceMap = true
+    kotlinOptions.moduleKind = 'commonjs'
+    kotlinOptions.main = "call"
+}
+
+kotlinFrontend {
+    npm {
+        dependency "style-loader" // production dependency
+        devDependency "karma"     // development dependency
+    }
+}
+
+kotlinFrontend {
+    webpackBundle {
+        bundleName = "main"
+        contentPath = file('src/main/web') // a file that represents a directory to be served by dev server)
+        publicPath = "/"  // web prefix
+    }
+}
