@@ -5,8 +5,8 @@ buildscript {
     ext.konan_version = '0.7'
 
     repositories {
-        google()
         jcenter()
+        google()
         maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
     }
 
@@ -22,7 +22,7 @@ buildscript {
 // Set up compilation dependency repositories for all projects.
 subprojects {
     repositories {
-        google()
         jcenter()
+        google()
     }
 }

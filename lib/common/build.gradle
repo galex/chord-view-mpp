@@ -1,20 +1,7 @@
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
+apply plugin: 'kotlin-platform-common'
 
 group 'il.co.galex'
 version '1.0.0'
-
-apply plugin: 'kotlin-platform-common'
-
-repositories {
-    mavenCentral()
-}
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
