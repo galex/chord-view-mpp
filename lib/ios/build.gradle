@@ -5,7 +5,7 @@ konan.targets = ['ios_arm64', 'ios_x64']
 
 konanArtifacts {
     // Declare building into a framework.
-    framework('Greeting') {
+    framework('ChordView') {
         // The multiplatform support is disabled by default.
         enableMultiplatform true
     }
