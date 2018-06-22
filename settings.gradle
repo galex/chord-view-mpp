@@ -1,7 +1,7 @@
 rootProject.name = 'chord-view-mpp'
 include ':lib'
 include ':lib:common'
-include ':lib:js'
+include ':lib:common_js'
 include ':lib:android'
 include ':lib:ios'
 

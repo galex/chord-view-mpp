@@ -1,19 +1,28 @@
 package il.co.galex.chordview.common.model
 
-enum class UkuleleChord(private vararg val positions: Position) {
+import il.co.galex.chordview.common.util.p
 
-    A(Position(FretNumber.FIRST, StringNumber.THIRD, Finger.INDEX), Position(FretNumber.SECOND, StringNumber.FOURTH, Finger.MIDDLE)),
-    C(Position(FretNumber.THIRD, StringNumber.FIRST, Finger.RING));
+enum class UkuleleChord(vararg val positions: Position) {
+
+    A(p(FretNumber.FIRST, StringNumber.THIRD, Finger.INDEX), p(FretNumber.SECOND, StringNumber.FOURTH, Finger.MIDDLE)),
+    C(p(FretNumber.THIRD, StringNumber.FIRST, Finger.RING)),
+    F(p(FretNumber.FIRST, StringNumber.SECOND, Finger.INDEX), p(FretNumber.SECOND, StringNumber.FOURTH, Finger.MIDDLE)),
+    G(p(FretNumber.SECOND, StringNumber.FIRST, Finger.MIDDLE), p(FretNumber.SECOND, StringNumber.THIRD, Finger.INDEX), p(FretNumber.THIRD, StringNumber.SECOND, Finger.RING));
 
     /**
      * Returns the biggest number of fret in a Chord so we can draw that number as max
      */
     fun biggestFret(): Int {
-        return positions.map { it.fret.number }.max()!!
+        return positions.map { it.fret.ordinal }.max()!!
     }
 
     /**
      * Knows how many strings we'll need to draw
      */
-    val stringsNumber: Int = StringNumber.values().size
+
+    companion object {
+
+        fun stringsNumber(): Int = StringNumber.values().size
+
+    }
 }
