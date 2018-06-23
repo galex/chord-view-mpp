@@ -1,1 +1,28 @@
 // Putting build config here screws the :lib:ios gradle configuration! 😰😰😰
+buildscript {
+    // Specify a Kotlin version you need.
+    ext.kotlin_version = '1.2.50'
+    ext.konan_version = '0.7'
+
+    repositories {
+        jcenter()
+        google()
+        maven { url "https://dl.bintray.com/jetbrains/kotlin-native-dependencies" }
+    }
+
+    // Specify all the plugins used as dependencies
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:$konan_version"
+        classpath 'com.android.tools.build:gradle:3.2.0-beta01'
+
+    }
+}
+
+// Set up compilation dependency repositories for all projects.
+subprojects {
+    repositories {
+        jcenter()
+        google()
+    }
+}
