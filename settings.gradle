@@ -3,5 +3,5 @@ include ':common'
 //include ':lib:ios'
 include ':WebApp'
 include ':WebApp:app'
-include ':app'
+include ':AndroidApp'
 
