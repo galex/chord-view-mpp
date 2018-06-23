@@ -1,7 +1,7 @@
 include ':app'
 includeBuild ('../') {
     dependencySubstitution {
-        substitute module('il.co.galex:android') with project(':lib:android')
+        substitute module('il.co.galex:android') with project(':android')
     }
 }
 

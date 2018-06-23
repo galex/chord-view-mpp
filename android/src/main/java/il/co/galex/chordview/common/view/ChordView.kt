@@ -9,6 +9,7 @@ import android.view.View
 import il.co.galex.chordview.common.helper.ChordViewHelper
 import il.co.galex.chordview.common.model.UkuleleChord
 import il.co.galex.chordview.common.util.HEIGHT
+import il.co.galex.chordview.common.util.RADIUS
 import il.co.galex.chordview.common.util.WIDTH
 
 @Suppress("CascadeIf")
@@ -73,8 +74,8 @@ actual class ChordView @JvmOverloads constructor(context: Context, attributeSet:
 
             ukuleleChord?.let {
 
-                ChordViewHelper.drawPositions(measuredWidth.toFloat(), measuredHeight.toFloat(), it) { x, y, radius ->
-                    canvas.drawCircle(x, y, radius, blackPaint)
+                ChordViewHelper.drawPositions(measuredWidth.toFloat(), measuredHeight.toFloat(), it) { x, y ->
+                    canvas.drawCircle(x, y, RADIUS, blackPaint)
                 }
 
             }
