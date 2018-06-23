@@ -19,26 +19,10 @@ actual class ChordView {
 
     actual var ukuleleChord: UkuleleChord? = null
 
-    actual fun drawLines(ukuleleChord: UkuleleChord) {
-
-        canvas?.let {
-
-            val context: CanvasRenderingContext2D = it.getContext("2d") as CanvasRenderingContext2D
-            context.moveTo(0.0, 0.0)
-            context.lineTo(WIDTH.toDouble(), HEIGHT.toDouble())
-            context.stroke()
-        }
-    }
-
-    actual fun drawCircles(ukuleleChord: UkuleleChord) {
-
-
-    }
 
     fun render() {
         ukuleleChord?.let {
-            drawLines(it)
-            drawCircles(it)
+
         }
     }
 }
