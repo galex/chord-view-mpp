@@ -9,13 +9,21 @@ import kotlin.browser.window
 @Suppress("unused")
 fun main(args: Array<String>) {
 
+    (document.getElementById("canvas1") as? HTMLCanvasElement).createChord(UkuleleChord.A)
+    (document.getElementById("canvas2") as? HTMLCanvasElement).createChord(UkuleleChord.C)
+    (document.getElementById("canvas3") as? HTMLCanvasElement).createChord(UkuleleChord.G)
+    (document.getElementById("canvas4") as? HTMLCanvasElement).createChord(UkuleleChord.F)
 
-    window.alert("Alert! Alert!!!")
+    console.log("End!")
+}
 
-    val canvas = document.getElementById("canvas") as HTMLCanvasElement
-    val chordView = ChordView()
+fun HTMLCanvasElement?.createChord(ukuleleChord: UkuleleChord) {
 
-    chordView.canvas = canvas
-    chordView.ukuleleChord = UkuleleChord.A
-    chordView.render()
+    this?.let {
+
+        val chordView = ChordView()
+        chordView.canvas = it
+        chordView.ukuleleChord = ukuleleChord
+        chordView.render()
+    }
 }

@@ -30,7 +30,7 @@ object ChordViewHelper {
         for (i in 1..4) renderLine(x, y + fretHeight * i, width, y + fretHeight * i)
     }
 
-    fun drawPositions(viewWidth: Float, currentHeight: Float, ukuleleChord: UkuleleChord, renderCircle: (x: Float, y: Float, radius: Float) -> Unit) {
+    fun drawPositions(viewWidth: Float, currentHeight: Float, ukuleleChord: UkuleleChord, renderCircle: (x: Float, y: Float) -> Unit) {
 
         val x = 0F + MARGIN
         val y = 0F + MARGIN
@@ -49,7 +49,7 @@ object ChordViewHelper {
             val fretPosition = position.fret.ordinal + 1
             val posY = y + (fretHeight * fretPosition) - fretHeight / 2
 
-            renderCircle(posX, posY, RADIUS)
+            renderCircle(posX, posY)
         }
     }
 }
