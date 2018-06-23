@@ -3,5 +3,5 @@ include ':lib'
 include ':lib:common'
 include ':lib:common_js'
 include ':lib:android'
-include ':lib:ios'
+//include ':lib:ios'
 

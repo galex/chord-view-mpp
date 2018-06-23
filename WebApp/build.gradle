@@ -1,1 +1,23 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+
+    ext.kotlin_version = '1.2.50'
+
+    repositories {
+        jcenter()
+        maven {
+            url "https://dl.bintray.com/kotlin/kotlin-eap"
+        }
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "org.jetbrains.kotlin:kotlin-frontend-plugin:0.0.31"
+    }
+}
+
+plugins {
+    id 'java'
+}
+
+group 'galex.co.il'
+version '1.0.0'
