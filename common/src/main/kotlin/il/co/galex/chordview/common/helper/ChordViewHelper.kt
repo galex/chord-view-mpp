@@ -3,7 +3,6 @@ package il.co.galex.chordview.common.helper
 import il.co.galex.chordview.common.model.UkuleleChord
 import il.co.galex.chordview.common.util.MARGIN
 import il.co.galex.chordview.common.util.MINIMUM_FRETS
-import il.co.galex.chordview.common.util.RADIUS
 
 /**
  * @author Alexander Gherschon
@@ -12,7 +11,7 @@ object ChordViewHelper {
 
     fun drawGrid(viewWidth: Float, currentHeight: Float, renderLine: (x: Float, y: Float, endX: Float, endY: Float) -> Unit) {
 
-        Logger.log("drawing the grid")
+        Logger.log("calculating the drawing of the grid")
 
         val x = 0F + MARGIN
         val y = 0F + MARGIN
@@ -20,6 +19,7 @@ object ChordViewHelper {
         val width = viewWidth - MARGIN
         val height = currentHeight - MARGIN
 
+        Logger.log("Requesting to render the grid when size $width x $height")
         renderLine(x, y, width, y)
         renderLine(width, y, width, height)
         renderLine(width, height, x, height)
@@ -34,8 +34,7 @@ object ChordViewHelper {
 
     fun drawPositions(viewWidth: Float, currentHeight: Float, ukuleleChord: UkuleleChord, renderCircle: (x: Float, y: Float) -> Unit) {
 
-        Logger.log("drawing the ukulele chord positions")
-
+        Logger.log("calculating the drawing of the positions")
 
         val x = 0F + MARGIN
         val y = 0F + MARGIN
@@ -53,6 +52,8 @@ object ChordViewHelper {
 
             val fretPosition = position.fret.ordinal + 1
             val posY = y + (fretHeight * fretPosition) - fretHeight / 2
+
+            Logger.log("Requesting to render a circle at $posX, $posY")
 
             renderCircle(posX, posY)
         }

@@ -8,19 +8,21 @@ import UIKit
 
 class ChordView: UIView {
 
+    let ukuleleChord: KNFUkuleleChord? = nil
+    
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-
-        if let context = UIGraphicsGetCurrentContext() {
-            context.setStrokeColor(UIColor.gray.cgColor)
-            context.setLineWidth(1)
-            context.move(to: CGPoint(x: 0, y: bounds.height))
-            context.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
-            context.strokePath()
-        }
-    }
-    
-    func test() {
         
+        if let context = UIGraphicsGetCurrentContext() {
+            
+            KNFChordViewHelper().drawGrid(viewWidth: frame.width, currentHeight: frame.height, renderLine: { (x: CGFloat, y: CGFloat) ->
+                
+                context.setStrokeColor(UIColor.gray.cgColor)
+                context.setLineWidth(1)
+                context.move(to: CGPoint(x: 0, y: bounds.height))
+                context.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
+                context.strokePath()
+            }
+        }
     }
 }

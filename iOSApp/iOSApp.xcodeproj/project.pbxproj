@@ -222,6 +222,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = galex.co.il;
+				TargetAttributes = {
+					5D92F56A7C5BF0E493D7B1C4 = {
+						DevelopmentTeam = 4NKNGW5ZP9;
+					};
+				};
 			};
 			buildConfigurationList = 5D92F084FD323F877D93D76C /* Build configuration list for PBXProject "iOSApp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -257,7 +262,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		5D92FEE852D612AA0D56DBB7 /* Compile Kotlin/Native */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputPaths = (
@@ -267,7 +272,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/$KONAN_PACKAGE_NAME\"; sh -c \". ./gradlew $KONAN_TASK -Pkonan.configuration.build.dir=\\\"$CONFIGURATION_BUILD_DIR\\\" \\\n-Pkonan.debugging.symbols=$DEBUGGING_SYMBOLS -Pkonan.optimizations.enable=$KONAN_ENABLE_OPTIMIZATIONS\"";
+			shellScript = "cd \"$SRCROOT/$KONAN_PACKAGE_NAME\"; sh -c \"./../../gradlew $KONAN_TASK -Pkonan.configuration.build.dir=\\\"$CONFIGURATION_BUILD_DIR\\\" \\\n-Pkonan.debugging.symbols=$DEBUGGING_SYMBOLS -Pkonan.optimizations.enable=$KONAN_ENABLE_OPTIMIZATIONS\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -317,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4NKNGW5ZP9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					$BUILT_PRODUCTS_DIR,
@@ -357,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4NKNGW5ZP9;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					$BUILT_PRODUCTS_DIR,

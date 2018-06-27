@@ -19,7 +19,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let test = KNFKotlinNativeFramework()
-        test.helloFromKotlin()
+        //let test = KNFKotlinNativeFramework()
+        //test.helloFromKotlin()
+        
+        
     }
 }
