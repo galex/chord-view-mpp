@@ -21,8 +21,8 @@ repositories {
 }
 
 dependencies {
-    expectedBy project(":common")
     compile "org.jetbrains.kotlin:kotlin-stdlib"
+    apply plugin: 'kotlin'
 }
 
 

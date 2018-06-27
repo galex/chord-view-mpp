@@ -9,9 +9,9 @@ import org.w3c.dom.CanvasRenderingContext2D
 import org.w3c.dom.HTMLCanvasElement
 import kotlin.math.PI
 
-actual class ChordView {
+class ChordView {
 
-    actual var ukuleleChord: UkuleleChord? = null
+    var ukuleleChord: UkuleleChord? = null
 
     lateinit var canvas: HTMLCanvasElement
 

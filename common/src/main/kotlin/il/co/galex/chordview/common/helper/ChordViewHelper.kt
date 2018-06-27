@@ -12,6 +12,8 @@ object ChordViewHelper {
 
     fun drawGrid(viewWidth: Float, currentHeight: Float, renderLine: (x: Float, y: Float, endX: Float, endY: Float) -> Unit) {
 
+        Logger.log("drawing the grid")
+
         val x = 0F + MARGIN
         val y = 0F + MARGIN
 
@@ -31,6 +33,9 @@ object ChordViewHelper {
     }
 
     fun drawPositions(viewWidth: Float, currentHeight: Float, ukuleleChord: UkuleleChord, renderCircle: (x: Float, y: Float) -> Unit) {
+
+        Logger.log("drawing the ukulele chord positions")
+
 
         val x = 0F + MARGIN
         val y = 0F + MARGIN

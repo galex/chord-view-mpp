@@ -4,5 +4,5 @@ include ':common'
 include ':WebApp'
 include ':WebApp:app'
 include ':AndroidApp'
-include ":iOSApp:KotlinNativeFramework"
+include ':KotlinNativeFramework'
 

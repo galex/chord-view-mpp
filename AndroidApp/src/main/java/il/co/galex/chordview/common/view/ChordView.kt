@@ -13,9 +13,9 @@ import il.co.galex.chordview.common.util.RADIUS
 import il.co.galex.chordview.common.util.WIDTH
 
 @Suppress("CascadeIf")
-actual class ChordView @JvmOverloads constructor(context: Context, attributeSet: AttributeSet? = null, defStyleAttr: Int = 0): View(context, attributeSet, defStyleAttr) {
+class ChordView @JvmOverloads constructor(context: Context, attributeSet: AttributeSet? = null, defStyleAttr: Int = 0): View(context, attributeSet, defStyleAttr) {
 
-    actual var ukuleleChord: UkuleleChord? = null
+    var ukuleleChord: UkuleleChord? = null
 
     private val blackPaint: Paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = ContextCompat.getColor(context, android.R.color.black)
@@ -23,11 +23,6 @@ actual class ChordView @JvmOverloads constructor(context: Context, attributeSet:
 
 
     }
-
-    /*private val whitePaint: Paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = ContextCompat.getColor(context, android.R.color.white)
-        strokeWidth = 4F
-    }*/
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)

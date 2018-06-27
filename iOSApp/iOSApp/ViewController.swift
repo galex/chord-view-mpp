@@ -11,17 +11,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var topLeftView: ChordView!
+    @IBOutlet weak var topRightView: ChordView!
+    @IBOutlet weak var bottomLeftView: ChordView!
+    @IBOutlet weak var bottomRightView: ChordView!
+    
     override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+        super.viewDidLoad()
+        
+        let test = KNFKotlinNativeFramework()
+        test.helloFromKotlin()
     }
-
-
-    override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
-    }
-
-
-
 }

@@ -6,8 +6,6 @@
 //  Copyright © 2018 galex.co.il. All rights reserved.
 //
 
-import
-
-class KotlinNativeFramework: UIView {
+class KotlinNativeFramework {
     fun helloFromKotlin() = "Hello from Kotlin!"
 }

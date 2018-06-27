@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5944E3CC20E2785A00DCA657 /* KotlinNativeFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5944E3CB20E2785A00DCA657 /* KotlinNativeFramework.framework */; };
+		5D92F1CED8AD5DB120A561E5 /* ChordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92FD3BB36FB1C997CB2C3F /* ChordView.swift */; };
 		5D92F29856954C9E1B354B5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D92F1F8F8B4686D4FF76EC5 /* LaunchScreen.storyboard */; };
 		5D92F46C88037807D724E5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92F0802DA1B7BA72BC99E5 /* AppDelegate.swift */; };
-		5D92F66E99D48CA9C0D2822E /* KotlinNativeFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92F21995C1F2373D2BBDB6 /* KotlinNativeFramework.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, CodeSignOnCopy, ); }; };
+		5D92F66E99D48CA9C0D2822E /* KotlinNativeFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92F21995C1F2373D2BBDB6 /* KotlinNativeFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5D92F7094A27A72EE5AC1E89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D92FF239EDF0165D10324C7 /* Assets.xcassets */; };
 		5D92FA045946DB9B9C5CA1C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D92F2820A187E91FA828E37 /* Main.storyboard */; };
-		5D92FBD8D4282879743B162C /* KotlinNativeFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92FE54BE612F9A9671C8D7 /* KotlinNativeFramework.framework */; };
 		5D92FE5787F1B59D0B230D51 /* KotlinNativeFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D92F21995C1F2373D2BBDB6 /* KotlinNativeFramework.framework */; };
 		5D92FE71B3D160324E01AADA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92FE8324CA5C995D0A3EAF /* ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		5D92F92F952DD7F1103EA5BB /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 0;
 			dstSubfolderSpec = 10;
 			files = (
 				5D92F66E99D48CA9C0D2822E /* KotlinNativeFramework.framework in Embed Frameworks */,
@@ -40,6 +42,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5944E3CA20E2754D00DCA657 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		5944E3CB20E2785A00DCA657 /* KotlinNativeFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KotlinNativeFramework.framework; path = KotlinNativeFramework/build/konan/bin/ios_x64/KotlinNativeFramework.framework; sourceTree = "<group>"; };
+		5944E3CD20E2788F00DCA657 /* BridginHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridginHeader.h; sourceTree = "<group>"; };
 		5D92F0400B3882794A844D37 /* KotlinNativeFramework.kt */ = {isa = PBXFileReference; lastKnownFileType = file.kt; path = KotlinNativeFramework.kt; sourceTree = "<group>"; };
 		5D92F0802DA1B7BA72BC99E5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D92F1A086DDFC3044B5B47D /* build.gradle */ = {isa = PBXFileReference; lastKnownFileType = file.gradle; path = build.gradle; sourceTree = "<group>"; };
@@ -52,7 +57,7 @@
 		5D92FBEFAE876848E3A2DD34 /* gradle-wrapper.jar */ = {isa = PBXFileReference; lastKnownFileType = archive.jar; path = "gradle-wrapper.jar"; sourceTree = "<group>"; };
 		5D92FC1918C86C7BB2770FBE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		5D92FC9722687F8CFA226A80 /* iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D92FE54BE612F9A9671C8D7 /* KotlinNativeFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KotlinNativeFramework.framework; path = Library/Frameworks/KotlinNativeFramework.framework; sourceTree = DEVELOPER_DIR; };
+		5D92FD3BB36FB1C997CB2C3F /* ChordView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChordView.swift; sourceTree = "<group>"; };
 		5D92FE8324CA5C995D0A3EAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D92FF239EDF0165D10324C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -62,8 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D92FBD8D4282879743B162C /* KotlinNativeFramework.framework in Frameworks */,
 				5D92FE5787F1B59D0B230D51 /* KotlinNativeFramework.framework in Frameworks */,
+				5944E3CC20E2785A00DCA657 /* KotlinNativeFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +103,7 @@
 				5D92F0802DA1B7BA72BC99E5 /* AppDelegate.swift */,
 				5D92F2820A187E91FA828E37 /* Main.storyboard */,
 				5D92FE8324CA5C995D0A3EAF /* ViewController.swift */,
+				5944E3CD20E2788F00DCA657 /* BridginHeader.h */,
 			);
 			path = iOSApp;
 			sourceTree = "<group>";
@@ -138,7 +144,7 @@
 		5D92F8AAD1891499FEB5AFE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5D92FE54BE612F9A9671C8D7 /* KotlinNativeFramework.framework */,
+				5944E3CB20E2785A00DCA657 /* KotlinNativeFramework.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -168,6 +174,7 @@
 				5D92F8AAD1891499FEB5AFE3 /* Frameworks */,
 				5D92F1558CF7155DA0AF0901 /* iOSApp */,
 				5D92F0474DF0A19A4A40314B /* KotlinNativeFramework */,
+				5D92FD3BB36FB1C997CB2C3F /* ChordView.swift */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +278,7 @@
 			files = (
 				5D92F46C88037807D724E5AC /* AppDelegate.swift in Sources */,
 				5D92FE71B3D160324E01AADA /* ViewController.swift in Sources */,
+				5D92F1CED8AD5DB120A561E5 /* ChordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +305,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				5D92F223A06CE3EC40B37F68 /* Base */,
+				5944E3CA20E2754D00DCA657 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -309,11 +318,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = $BUILT_PRODUCTS_DIR;
+				FRAMEWORK_SEARCH_PATHS = (
+					$BUILT_PRODUCTS_DIR,
+					"$(PROJECT_DIR)/KotlinNativeFramework/build/konan/bin/ios_x64",
+				);
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = galex.co.il.iOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = iOSApp/BridginHeader.h;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -344,11 +358,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = $BUILT_PRODUCTS_DIR;
+				FRAMEWORK_SEARCH_PATHS = (
+					$BUILT_PRODUCTS_DIR,
+					"$(PROJECT_DIR)/KotlinNativeFramework/build/konan/bin/ios_x64",
+				);
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = galex.co.il.iOSApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = iOSApp/BridginHeader.h;
+				SWIFT_PRECOMPILE_BRIDGING_HEADER = NO;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -402,8 +421,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -507,6 +525,7 @@
 				5D92FA6D78F4E385B7B8F5E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D92FAEFBCB5769AC2F914B5 /* Build configuration list for PBXNativeTarget "KotlinNativeFramework" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +534,7 @@
 				5D92FF4552B6DD5C17F01A28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

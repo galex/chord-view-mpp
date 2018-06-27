@@ -9,10 +9,10 @@ import kotlin.browser.window
 @Suppress("unused")
 fun main(args: Array<String>) {
 
-    (document.getElementById("canvas1") as? HTMLCanvasElement).createChord(UkuleleChord.A)
-    (document.getElementById("canvas2") as? HTMLCanvasElement).createChord(UkuleleChord.C)
-    (document.getElementById("canvas3") as? HTMLCanvasElement).createChord(UkuleleChord.G)
-    (document.getElementById("canvas4") as? HTMLCanvasElement).createChord(UkuleleChord.F)
+    (document.getElementById("canvas1") as? HTMLCanvasElement)?.createChord(UkuleleChord.A)
+    (document.getElementById("canvas2") as? HTMLCanvasElement)?.createChord(UkuleleChord.C)
+    (document.getElementById("canvas3") as? HTMLCanvasElement)?.createChord(UkuleleChord.G)
+    (document.getElementById("canvas4") as? HTMLCanvasElement)?.createChord(UkuleleChord.F)
 
     console.log("End!")
 }
