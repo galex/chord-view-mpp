@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,59 +16,9 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U1j-Bh-xKd" customClass="ChordView" customModule="iOSApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="20" width="163.5" height="218"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="U1j-Bh-xKd" secondAttribute="height" multiplier="3:4" id="Hqh-8A-rTX"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVE-ab-BSm" customClass="ChordView" customModule="iOSApp" customModuleProvider="target">
-                                <rect key="frame" x="195.5" y="20" width="163.5" height="218"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="gVE-ab-BSm" secondAttribute="height" multiplier="3:4" id="7fy-iY-kDF"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLd-Ib-dZl" customClass="ChordView" customModule="iOSApp" customModuleProvider="target">
-                                <rect key="frame" x="16" y="254" width="163.5" height="218"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="XLd-Ib-dZl" secondAttribute="height" multiplier="3:4" id="GSk-43-ly0"/>
-                                </constraints>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dgs-TP-FnP" customClass="ChordView" customModule="iOSApp" customModuleProvider="target">
-                                <rect key="frame" x="195.5" y="254" width="163.5" height="218"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="dgs-TP-FnP" secondAttribute="height" multiplier="3:4" id="KVB-bj-fPQ"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="gVE-ab-BSm" firstAttribute="leading" secondItem="dgs-TP-FnP" secondAttribute="leading" id="5q5-oL-d2A"/>
-                            <constraint firstItem="XLd-Ib-dZl" firstAttribute="top" secondItem="U1j-Bh-xKd" secondAttribute="bottom" constant="16" id="Fjx-01-Gsd"/>
-                            <constraint firstItem="U1j-Bh-xKd" firstAttribute="top" secondItem="wIS-Vc-hZn" secondAttribute="top" id="Gyy-VC-5WW"/>
-                            <constraint firstItem="dgs-TP-FnP" firstAttribute="top" secondItem="gVE-ab-BSm" secondAttribute="bottom" constant="16" id="KJr-zW-u9l"/>
-                            <constraint firstItem="U1j-Bh-xKd" firstAttribute="leading" secondItem="wIS-Vc-hZn" secondAttribute="leading" constant="16" id="KlN-DI-Wdh"/>
-                            <constraint firstItem="wIS-Vc-hZn" firstAttribute="trailing" secondItem="dgs-TP-FnP" secondAttribute="trailing" constant="16" id="Qe0-mB-KLf"/>
-                            <constraint firstItem="XLd-Ib-dZl" firstAttribute="leading" secondItem="wIS-Vc-hZn" secondAttribute="leading" constant="16" id="Ral-73-Hw3"/>
-                            <constraint firstItem="dgs-TP-FnP" firstAttribute="leading" secondItem="XLd-Ib-dZl" secondAttribute="trailing" constant="16" id="U05-vL-O8l"/>
-                            <constraint firstItem="U1j-Bh-xKd" firstAttribute="bottom" secondItem="gVE-ab-BSm" secondAttribute="bottom" id="mMw-rU-uEo"/>
-                            <constraint firstItem="gVE-ab-BSm" firstAttribute="top" secondItem="wIS-Vc-hZn" secondAttribute="top" id="x4M-8y-nZm"/>
-                            <constraint firstItem="gVE-ab-BSm" firstAttribute="leading" secondItem="U1j-Bh-xKd" secondAttribute="trailing" constant="16" id="x4g-VV-UQA"/>
-                            <constraint firstItem="wIS-Vc-hZn" firstAttribute="trailing" secondItem="gVE-ab-BSm" secondAttribute="trailing" constant="16" id="yyb-KA-eXA"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="wIS-Vc-hZn"/>
                     </view>
-                    <connections>
-                        <outlet property="bottomLeftView" destination="XLd-Ib-dZl" id="80l-Sc-a0f"/>
-                        <outlet property="bottomRightView" destination="dgs-TP-FnP" id="HGj-Pr-H7k"/>
-                        <outlet property="topLeftView" destination="U1j-Bh-xKd" id="QlO-Vc-vuZ"/>
-                        <outlet property="topRightView" destination="gVE-ab-BSm" id="V6e-vF-u7m"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
