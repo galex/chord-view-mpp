@@ -15,14 +15,15 @@ class ChordView: UIView {
         
         if let context = UIGraphicsGetCurrentContext() {
             
-            KNFChordViewHelper().drawGrid(viewWidth: frame.width, currentHeight: frame.height, renderLine: { (x: CGFloat, y: CGFloat) ->
+            KNFChordViewHelper().drawGrid(viewWidth: Float(frame.width), currentHeight: Float(frame.height), renderLine: { (x: NSNumber, y: NSNumber, endX: NSNumber, endY: NSNumber) in
                 
                 context.setStrokeColor(UIColor.gray.cgColor)
                 context.setLineWidth(1)
-                context.move(to: CGPoint(x: 0, y: bounds.height))
-                context.addLine(to: CGPoint(x: bounds.width, y: bounds.height))
+                context.move(to: CGPoint(x: 0, y: self.bounds.height))
+                context.addLine(to: CGPoint(x: self.bounds.width, y: self.bounds.height))
                 context.strokePath()
-            }
+                return KNFStdlibUnit()
+            })
         }
     }
 }
