@@ -8,3 +8,9 @@ local.properties
 .DS_Store
 /captures
 .externalNativeBuild
+/iOSApp/DerivedData
+
+/iOSApp/*.xcodeproj/*
+/iOSApp/!*.xcodeproj/project.pbxproj
+/iOSApp/!*.xcodeproj/xcshareddata/
+/iOSApp/!*.xcworkspace/contents.xcworkspacedata
