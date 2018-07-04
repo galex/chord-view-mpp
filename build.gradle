@@ -1,7 +1,7 @@
 // Putting build config here screws the :lib:ios gradle configuration! 😰😰😰
 buildscript {
     // Specify a Kotlin version you need.
-    ext.kotlin_version = '1.2.50'
+    ext.kotlin_version = '1.2.51'
     ext.konan_version = '0.7.1'
 
     repositories {
@@ -14,7 +14,7 @@ buildscript {
     dependencies {
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "org.jetbrains.kotlin:kotlin-native-gradle-plugin:$konan_version"
-        classpath 'com.android.tools.build:gradle:3.2.0-beta01'
+        classpath 'com.android.tools.build:gradle:3.3.0-alpha02'
 
     }
 }

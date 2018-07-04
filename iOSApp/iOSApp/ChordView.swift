@@ -13,7 +13,9 @@ class ChordView: UIView {
     
     var ukuleleChord: KNFUkuleleChord?
     private var linesLayer: CAShapeLayer?
-    private var dotsLayer: CAShapeLayer?
+    private var dotsLayers = [CAShapeLayer]()
+    private var numLines = 0
+    private var numCircles = 0
     
     convenience init(frame: CGRect, chord: KNFUkuleleChord) {
         self.init(frame: frame)
@@ -45,18 +47,19 @@ class ChordView: UIView {
         super.draw(rect)
         NSLog("draw. frame is \(frame)")
 
-        
         if linesLayer == nil {
             linesLayer = CAShapeLayer()
             view.layer.addSublayer(linesLayer!)
         }
-        if dotsLayer == nil {
-            dotsLayer = CAShapeLayer()
-            view.layer.addSublayer(dotsLayer!)
+        
+        for layer in dotsLayers {
+            layer.removeFromSuperlayer()
         }
         
+        dotsLayers.removeAll()
+        
         var linesCount = 0
-        var circlesCount = 0
+        var circlesIndex = 0
         let aPath = UIBezierPath()
         
         let helper = KNFChordViewHelper()
@@ -68,13 +71,19 @@ class ChordView: UIView {
             
             linesCount += 1
             
-            if linesCount == 10 {
+            if linesCount == self.numLines {
                 NSLog("drawing liones")
                 self.linesLayer?.path = aPath.cgPath
                 self.linesLayer?.strokeColor = UIColor.black.cgColor
                 self.linesLayer?.lineWidth = 5
             }
             
+            return KNFStdlibUnit()
+        }, beforeRender: { numLines in
+            self.numLines = Int(truncating: numLines)
+            return KNFStdlibUnit()
+        }, afterRender: {
+            // do nothing
             return KNFStdlibUnit()
         })
         
@@ -83,13 +92,24 @@ class ChordView: UIView {
             
             let circlePath = UIBezierPath(arcCenter: CGPoint(x: CGFloat(truncating: x), y: CGFloat(truncating: y)), radius: 10, startAngle: CGFloat(0), endAngle:CGFloat(Double.pi * 2), clockwise: true)
             
-            circlesCount += 1
+            let layer = self.dotsLayers[circlesIndex]
             
-            if circlesCount == 2 {
-                self.dotsLayer?.path = circlePath.cgPath
-                self.dotsLayer?.fillColor = UIColor.black.cgColor
+            layer.path = circlePath.cgPath
+            layer.fillColor = UIColor.black.cgColor
+            
+            self.view.layer.addSublayer(layer)
+            
+            circlesIndex += 1
+            
+            return KNFStdlibUnit()
+        }, beforeRender: { numDots in
+            self.numCircles = Int(truncating: numDots)
+            for _ in 0...Int(truncating: numDots) {
+                self.dotsLayers.append(CAShapeLayer())
             }
-            
+            return KNFStdlibUnit()
+        }, afterRender: {
+            // do nothing
             return KNFStdlibUnit()
         })
         

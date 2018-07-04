@@ -9,9 +9,12 @@ import il.co.galex.chordview.common.util.MINIMUM_FRETS
  */
 object ChordViewHelper {
 
-    fun drawGrid(viewWidth: Float, currentHeight: Float, renderLine: (x: Float, y: Float, endX: Float, endY: Float) -> Unit) {
+    fun drawGrid(viewWidth: Float, currentHeight: Float, renderLine: (x: Float, y: Float, endX: Float, endY: Float) -> Unit,
+                 beforeRender: ((numLines: Int) -> Unit)?, afterRender: (() -> Unit)?) {
 
-        Logger.log("calculating the drawing of the grid")
+//        Logger.log("calculating the drawing of the grid")
+
+        beforeRender?.invoke(10)
 
         val x = 0F + MARGIN
         val y = 0F + MARGIN
@@ -19,7 +22,7 @@ object ChordViewHelper {
         val width = viewWidth - MARGIN
         val height = currentHeight - MARGIN
 
-        Logger.log("Requesting to render the grid when size $width x $height")
+//        Logger.log("Requesting to render the grid when size $width x $height")
         renderLine(x, y, width, y)
         renderLine(width, y, width, height)
         renderLine(width, height, x, height)
@@ -30,11 +33,16 @@ object ChordViewHelper {
 
         val fretHeight = (height - y) / MINIMUM_FRETS
         for (i in 1..4) renderLine(x, y + fretHeight * i, width, y + fretHeight * i)
+
+        afterRender?.invoke()
     }
 
-    fun drawPositions(viewWidth: Float, currentHeight: Float, ukuleleChord: UkuleleChord, renderCircle: (x: Float, y: Float) -> Unit) {
+    fun drawPositions(viewWidth: Float, currentHeight: Float, ukuleleChord: UkuleleChord, renderCircle: (x: Float, y: Float) -> Unit,
+                      beforeRender: ((numDots: Int) -> Unit)?, afterRender: (() -> Unit)?) {
 
-        Logger.log("calculating the drawing of the positions")
+//        Logger.log("calculating the drawing of the positions")
+
+        beforeRender?.invoke(ukuleleChord.positions.size)
 
         val x = 0F + MARGIN
         val y = 0F + MARGIN
@@ -53,9 +61,11 @@ object ChordViewHelper {
             val fretPosition = position.fret.ordinal + 1
             val posY = y + (fretHeight * fretPosition) - fretHeight / 2
 
-            Logger.log("Requesting to render a circle at $posX, $posY")
+//            Logger.log("Requesting to render a circle at $posX, $posY")
 
             renderCircle(posX, posY)
         }
+
+        afterRender?.invoke()
     }
 }
