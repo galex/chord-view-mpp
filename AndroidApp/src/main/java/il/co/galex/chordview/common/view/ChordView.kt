@@ -63,15 +63,15 @@ class ChordView @JvmOverloads constructor(context: Context, attributeSet: Attrib
 
         canvas?.let {
 
-            ChordViewHelper.drawGrid(measuredWidth.toFloat(), measuredHeight.toFloat()) { x, y, endX, endY ->
+            ChordViewHelper.drawGrid(measuredWidth.toFloat(), measuredHeight.toFloat(), { x, y, endX, endY ->
                 canvas.drawLine(x, y, endX, endY, blackPaint)
-            }
+            }, null, null)
 
             ukuleleChord?.let {
 
-                ChordViewHelper.drawPositions(measuredWidth.toFloat(), measuredHeight.toFloat(), it) { x, y ->
+                ChordViewHelper.drawPositions(measuredWidth.toFloat(), measuredHeight.toFloat(), it, { x, y ->
                     canvas.drawCircle(x, y, RADIUS, blackPaint)
-                }
+                }, null, null)
 
             }
 

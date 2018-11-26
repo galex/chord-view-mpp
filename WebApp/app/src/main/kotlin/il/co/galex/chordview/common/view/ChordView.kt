@@ -30,7 +30,7 @@ class ChordView {
             console.log("rendering inside our canvas = $canvas")
             console.log("rendering inside our canvas context = ${canvas.getContext("2d")}")
 
-            ChordViewHelper.drawGrid(canvas.width.toFloat(), canvas.height.toFloat()) { x, y, endX, endY ->
+            ChordViewHelper.drawGrid(canvas.width.toFloat(), canvas.height.toFloat(), { x, y, endX, endY ->
 
                 val context2D = canvas.getContext("2d") as CanvasRenderingContext2D
 
@@ -38,9 +38,9 @@ class ChordView {
                 context2D.moveTo(x.toDouble(), y.toDouble())
                 context2D.lineTo(endX.toDouble(), endY.toDouble())
                 context2D.stroke()
-            }
+            }, null, null)
 
-            ChordViewHelper.drawPositions(canvas.width.toFloat(), canvas.height.toFloat(), it) { x, y  ->
+            ChordViewHelper.drawPositions(canvas.width.toFloat(), canvas.height.toFloat(), it, { x, y  ->
 
                 val context2D = canvas.getContext("2d") as CanvasRenderingContext2D
 
@@ -49,7 +49,7 @@ class ChordView {
                 context2D.fillStyle = "black"
                 context2D.fill()
                 context2D.stroke()
-            }
+            }, null, null)
         }
     }
 }
